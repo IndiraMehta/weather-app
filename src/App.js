@@ -89,14 +89,15 @@ function App() {
   };
 
   // Weather ke icon select karo
-  const getWeaatherIconUrl = (main) => {
-    if (main === "Clouds") return "/thunder.png";
-    else if (main === "Rain") return "/rain_with_cloud.png";
-    else if (main === "Mist") return "/Tornado.png";
-    else if (main === "Haze") return "/sun.png";
-    else if (main === "Clear") return "/sun.png";
-    else return "/images.png"; // default icon
-  };
+ const getWeatherIconUrl = (main) => {
+  if (main === "Clouds") return "/thunder.png";
+  else if (main === "Rain") return "/rain_with_cloud.png";
+  else if (main === "Mist") return "/Tornado.png";
+  else if (main === "Haze") return "/sun.png";
+  else if (main === "Clear") return "/sun.png";
+  else return "/images.png"; // default icon
+};
+
 
   
   
@@ -117,11 +118,12 @@ function App() {
 
               {/* Weather Icon */}
               <img
-                className='container_img'
-                src={getWeaatherIconUrl(weatherData.weather[0].main)}
-                width="180px"
-                alt='Weather Icon'
-              />
+               className='container_img'
+               src={getWeatherIconUrl(weatherData.weather[0].main)}
+               width="180px"
+               alt='Weather Icon'
+               />
+
 
               {/* Temperature and Condition */}
               <h2 className='container_degree'>{weatherData.main.temp}°C</h2>
